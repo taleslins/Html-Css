@@ -7,7 +7,7 @@
 }
 
 body {
-    height: 100vh;
+    /*height: 100vh;*/
     box-sizing: border-box;
     background-color:black;
     color: white;
@@ -15,11 +15,26 @@ a {
    color:aliceblue;
  }
 
+.cabecalho {
+padding: 2% 0 0 15%;
+}
+
+ .cabecalho__menu {
+    display:flex;
+    gap:40px;
+ }
+ .cabecalho__menu__link {
+    font-family:"Montserrat", "sans-serif";
+    font: size 24px;
+    font-weight:600;
+    text-decoration:none;
+ }
 .elementos {
-    margin: 7% 6%;
+    padding: 8% 15%;
     display: flex;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between; 
+}   
 
 .elementos__texto-principal {
     width: 615px;
@@ -41,12 +56,26 @@ a {
     font-family: "Montserrat", sans-serif;
     
 }
+
+.elemento__texto-subtítulo{
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-size: 24px; 
+}
+
 .elementos__redes-sociais {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 32px;
 }
 .elementos__redes-sociais__instagram {
-    background-color:plum;
+    display:flex;
+    justify-content:center;
+    gap: 12px;  
+    border:2px solid #fd22f2;
+    border-radius: 8px;
     width: 280px;
     text-align: center;
     border-radius: 16px;
@@ -58,31 +87,46 @@ a {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-}
 
+}
+.elementos__redes-sociais__instagram:hover {
+    background-color:rgb(87, 5, 87);
+}
 .elementos__redes-sociais__github {
-    background-color:cornflowerblue;
+    display:flex;
+    justify-content:center;
+    gap: 12px;  
+    border:2px solid whitesmoke;
+    border-radius: 8px;
     width: 280px;
-    text-align:center;
+    text-align: center;
     border-radius: 16px;
-    font-size:24px;
+    font-size: 24px;
     padding: 21.5px 0;
     text-decoration: none;
-    color:black;
+    color: white;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
 }
+.elementos__redes-sociais__github:hover {
+  background-color: rgb(45, 75, 175);    
+}
+.imagem-principal img{
+    width:70%;
+    height:auto;
+}
+}
 
 .titulo-forte1  {
         color: #6622CC;
     }
-}
- footer {
-    color:firebrick;
-    a {
-        color: pink;
+
+.rodape {
+    color:#e00429;
+
+.contato {
+        color: rgb(192, 16, 16);
     }
- }
 }
