@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+--Cor-fundo:#000000;
+--Cor-texto: #ffffff;
+--Cor-Destaque-titulo-1:#D62828;
+--Cor-Destaque-titulo-2:#6622CC;
+--Cor-hover-instagram:#570557;
+--Cor-hover-github:#2d4baf;
+
+--Fonte-texto-primária: "Krona One", sans-serif;
+--Fonte-texto-secundaria: "Montserrat", "sans-serif";
+}
 
 *{
     margin: 0;
@@ -7,10 +18,11 @@
 }
 
 body {
-    /*height: 100vh;*/
+    
     box-sizing: border-box;
-    background-color:black;
-    color: white;
+    background-color:var(--Cor-fundo);
+    color: var(--Cor-texto);
+}
 a {
    color:aliceblue;
  }
@@ -23,44 +35,53 @@ padding: 2% 0 0 15%;
     display:flex;
     gap:40px;
  }
+
  .cabecalho__menu__link {
-    font-family:"Montserrat", "sans-serif";
-    font: size 24px;
+    font-family:var(--Fonte-texto-secundaria);
+    font-size: 1.3rem;
     font-weight:600;
     text-decoration:none;
  }
+
 .elementos {
     padding: 8% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between; 
+    gap: 82px;
 }   
 
 .elementos__texto-principal {
-    width: 615px;
+    width: 80%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 
 }
+
 .elementos__texto-principal__titulo {
-    font-size: 25px;
-    font-family: "Krona One", sans-serif;
+    font-size: 1,5625rem;
+    font-family: var(--Fonte-texto-primária);
     font-weight: 400;
     font-style: normal;   
-    color: #D62828;
+    color: var(--Cor-Destaque-titulo-1);
 }
+
+.titulo-forte1  {
+    color: var(--Cor-Destaque-titulo-2);
+}
+
 .elementos__texto-principal__paragrafo {
-    font-size: 14px;
+    font-size: 0,875rem;
     width: 400px;
     font-family: "Montserrat", sans-serif;
     
 }
 
 .elemento__texto-subtítulo{
-    font-family: "Krona One", sans-serif;
+    font-family: var(--Fonte-texto-primária);
     font-weight: 400;
-    font-size: 24px; 
+    font-size: 1.5rem; 
 }
 
 .elementos__redes-sociais {
@@ -70,63 +91,81 @@ padding: 2% 0 0 15%;
     justify-content: space-between; 
     gap: 32px;
 }
+
 .elementos__redes-sociais__instagram {
     display:flex;
     justify-content:center;
     gap: 12px;  
     border:2px solid #fd22f2;
     border-radius: 8px;
-    width: 280px;
+    width: 50%;
     text-align: center;
     border-radius: 16px;
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 21.5px 0;
     text-decoration: none;
     color:blueviolet;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--Fonte-texto-secundaria);
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+}
 
-}
 .elementos__redes-sociais__instagram:hover {
-    background-color:rgb(87, 5, 87);
+    background-color:#570557;
 }
+
 .elementos__redes-sociais__github {
     display:flex;
     justify-content:center;
     gap: 12px;  
     border:2px solid whitesmoke;
     border-radius: 8px;
-    width: 280px;
+    width: 50%;
     text-align: center;
     border-radius: 16px;
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 21.5px 0;
     text-decoration: none;
     color: white;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--Fonte-texto-secundaria);
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
 }
+
 .elementos__redes-sociais__github:hover {
-  background-color: rgb(45, 75, 175);    
-}
-.imagem-principal img{
-    width:70%;
-    height:auto;
-}
+  background-color: #2d4baf;    
 }
 
-.titulo-forte1  {
-        color: #6622CC;
-    }
+.elementos__imagem{
+    width: 50%;
+}
 
 .rodape {
     color:#e00429;
-
+    font-size: 1.5rem;
+    width:50%;
+}
 .contato {
         color: rgb(192, 16, 16);
+        font-size: 1.5rem;
+        width:50%;
+}
+
+
+@media (max-width: 661px) {
+    .elementos {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .elementos__texto-principal{
+        width: auto;
+    }
+    .elementos__imagem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
     }
 }
